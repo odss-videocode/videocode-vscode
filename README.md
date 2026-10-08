@@ -1,6 +1,7 @@
 # ODSS VS Code Extension
 
 Records and replays VS Code and Cursor editing sessions, terminal interactions, diagnostics, and AI-assisted code changes using the Open Developer Session Stream (ODSS) container format.
+
 <img width="1280" height="720" alt="VideoCode_demo_vsce_1_720p" src="https://github.com/user-attachments/assets/f1b7fc96-d483-4aee-9917-2d3fb4583c51" />
 
 ---
@@ -35,6 +36,7 @@ To capture and replay this stream without impacting VS Code's UI responsiveness,
 ## Recording Features
 
 ### 1. Starting a Recording Session
+
 <img width="1080" height="1350" alt="recording_ft" src="https://github.com/user-attachments/assets/dd8b0e60-843f-4c99-a1e3-f7e09bd4bef0" />
 
 - **Command**: `Ctrl + Shift + P`, `ODSS: Start Recording` (`odss.startRecording`)  
@@ -65,6 +67,7 @@ The host attaches listeners via `wireEditorEventForwarding()` to capture editor 
 - **Ordered Event Emission**: Terminal output is serialized per-terminal in the child process to prevent out-of-order chunks when backpressure occurs. -->
 
 ### 2. Stopping a Recording Session
+
 <img width="1080" height="1350" alt="stop_recording_ft" src="https://github.com/user-attachments/assets/5077bc9b-f4d4-444f-9ec2-4c2df8e354fe" />
 
 - **Command**: `Ctrl + Shift + P`, `ODSS: Stop Recording` (`odss.stopRecording`)
@@ -77,6 +80,7 @@ The host attaches listeners via `wireEditorEventForwarding()` to capture editor 
 ---
 
 ## Replay Features
+
 <img width="1920" height="1080" alt="open_replaying_ft-_2_" src="https://github.com/user-attachments/assets/27abdd4a-eb07-4218-bd9c-e3b593274a25" />
 
 ### 1. Opening and Mounting a Replay
@@ -100,6 +104,7 @@ Playback runs entirely inside an in-memory `FileSystemProvider` registered under
 - **Clean Teardown**: Unmounting a session purges the in-memory tree for that session authority.
 
 ### 3. Playback Controls
+
 <img width="1920" height="1080" alt="open_playback_fts" src="https://github.com/user-attachments/assets/62028f6a-dc35-4934-b2d5-b848ca9f6265" />
 
 - **Play / Resume**: `ODSS: Resume Replay` (`odss.resumeReplay`)
